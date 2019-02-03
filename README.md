@@ -16,3 +16,17 @@ The screw terminals drive the overall price of the project fairly high if you do
 
 You can import this CSV directly into Digi-Key (www.digikey.com)
 https://github.com/MarkFromSales/Mark-duino/blob/master/mark-duino_bom.csv
+
+## MCP Addresses
+The MCP A0, A1, and A2 pins are not directly connected in the PCB and have solder jumpers instead to allow flexibility in addressing. 
+
+```
+addr 0 = A2 low,  A1 low,  A0 low  000
+addr 1 = A2 low,  A1 low,  A0 high 001
+addr 2 = A2 low,  A1 high, A0 low  010
+addr 3 = A2 low,  A1 high, A0 high 011
+addr 4 = A2 high, A1 low,  A0 low  100
+addr 5 = A2 high, A1 low,  A0 high 101
+addr 6 = A2 high, A1 high, A0 low  110
+addr 7 = A2 high, A1 high, A0 high 111
+```
